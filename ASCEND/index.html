@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="main">
+      <img src="./ascend logo -02.png" alt="" />
+      <div class="mobile-number">
+        <p>Mobile Number</p>
+        <input type="number" id="mobile-number" placeholder="0241234567" />
+        <span id="error-message" class="error-message"></span>
+        <!-- Error message -->
+      </div>
+      <button type="button" onclick="validateNumber()">Submit</button>
+      <!-- Changed to type="button" to prevent form submission -->
+    </div>
+
+    <script>
+      function validateNumber() {
+        const inputField = document.getElementById("mobile-number");
+        const errorMessage = document.getElementById("error-message");
+        const mobileNumber = inputField.value.trim();
+
+        if (mobileNumber.length < 10) {
+          inputField.style.borderColor = "red";
+          errorMessage.textContent = "Sorry, you entered a wrong number";
+          errorMessage.style.display = "block";
+        } else {
+          inputField.style.borderColor = "gray";
+          errorMessage.textContent = "";
+          errorMessage.style.display = "none";
+        }
+      }
+    </script>
+  </body>
+</html>

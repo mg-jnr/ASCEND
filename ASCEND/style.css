@@ -1,0 +1,62 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Public Sans", sans-serif;
+  font-size: medium;
+}
+@media only screen and (max-width: 768px) {
+  body {
+    /*border: 2px solid red;*/
+    display: flex;
+    flex-direction: column;
+    min-height: 93vh;
+    padding: 0 60px;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+  }
+
+  .main {
+    padding-top: 70px;
+  }
+
+  img {
+    width: 100%;
+    margin-bottom: 50px;
+  }
+
+  /*.mobile-number{
+    border: 2px solid red;
+  }*/
+
+  .mobile-number p {
+    padding-bottom: 10px;
+    font-weight: bold;
+  }
+
+  .mobile-number input {
+    width: 100%;
+    padding: 12px 16px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: 1px solid gray;
+  }
+
+  button {
+    width: 100%;
+    color: white;
+    background: #5263f6;
+    padding: 16px 24px;
+    border-radius: 8px;
+    border-style: none;
+  }
+
+  .error-message {
+    color: red; /* Error message color */
+    font-size: 14px;
+    display: none; /* Hidden by default */
+    padding-bottom: 7px; /* Padding at the bottom */
+    margin-top: -10px;
+    margin-bottom: 15px;
+  }
+}
